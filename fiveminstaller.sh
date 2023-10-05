@@ -25,7 +25,7 @@ runCommand(){
     eval $COMMAND;
     BASH_CODE=$?
     if [ $BASH_CODE -ne 0 ]; then
-      echo -e "${red}An error occurred:${reset} ${white}${COMMAND}${reset}${red} returned${reset} ${white}${BASH_CODE}${reset}"
+      echo -e "${red}Ein Fehler ist aufgetreten:${reset} ${white}${COMMAND}${reset}${red} ! Der installer wurde gestoppt!${reset} ${white}${BASH_CODE}${reset}"
       exit ${BASH_CODE}
     fi
 }
@@ -64,7 +64,7 @@ function StartingScreenOptions() {
     status "Möchtest du den server jetzt direkt starten?"
     Options "Ja" "Nein"
 
-    case $OPTIONS in
+    case $Options in
         1) StartingScreen;;
         2) exit;;
     esac
