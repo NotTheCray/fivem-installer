@@ -38,7 +38,7 @@ function updateUpgrade() {
 
 function installDependencies() {
     status "Abhängigkeiten werden installiert"
-    runCommand "apt install xf tar"
+    runCommand "apt install tar"
     runCommand "apt install screen"
 }
 
