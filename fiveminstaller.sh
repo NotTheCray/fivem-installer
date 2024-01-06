@@ -72,8 +72,7 @@ function StartingScreenOptions() {
 
 function StartingScreen() {
     status "Danke fürs benutzen des FiveM Installers von Crayy"
-    sleep 2
-    status "Der Server wird gestartet"
+    sleep 5
     runCommand "screen -dmS FiveM ./run.sh"
 }
 
@@ -84,5 +83,5 @@ updateUpgrade
 installDependencies
 Direction
 ArifactsInstall
-StartingScreenOptions
+StartingScreen
 
